@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { createPayPalOrder, getPayPalAccessToken } from "@/lib/paypal";
 import { getAuthenticatedUser } from "@/lib/server-auth";
 
+export const runtime = "edge";
+
 export async function POST(request: Request) {
   const auth = await getAuthenticatedUser(request);
   if (!auth) {

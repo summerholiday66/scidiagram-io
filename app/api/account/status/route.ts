@@ -3,6 +3,8 @@ import { getUserProStatus } from "@/lib/pro-status";
 import { getAuthenticatedUser } from "@/lib/server-auth";
 import { getSupabaseServerClient } from "@/lib/supabase-server";
 
+export const runtime = "edge";
+
 export async function GET(request: Request) {
   const auth = await getAuthenticatedUser(request);
   if (!auth) {

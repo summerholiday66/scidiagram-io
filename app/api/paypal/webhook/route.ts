@@ -15,6 +15,8 @@ type PayPalWebhookEvent = {
   };
 };
 
+export const runtime = "edge";
+
 function readHeader(headers: Headers, name: string) {
   return headers.get(name)?.trim() ?? "";
 }

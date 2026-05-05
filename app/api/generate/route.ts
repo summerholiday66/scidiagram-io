@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { buildMoleculeDiagramPrompt, findPresetMolecule } from "@/lib/molecules";
 import { parseDiagramPayload } from "@/lib/mo-schema";
 
+export const runtime = "edge";
+
 export async function POST(request: Request) {
   const body = (await request.json()) as { formula?: string };
   const formula = body.formula?.trim();

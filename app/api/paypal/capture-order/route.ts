@@ -8,6 +8,8 @@ type CaptureOrderBody = {
   orderId?: string;
 };
 
+export const runtime = "edge";
+
 export async function POST(request: Request) {
   const auth = await getAuthenticatedUser(request);
   if (!auth) {
