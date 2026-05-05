@@ -2,9 +2,14 @@
   "name": "scidiagram-io",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22 <23",
+    "npm": ">=10"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "npx @cloudflare/next-on-pages@1",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
